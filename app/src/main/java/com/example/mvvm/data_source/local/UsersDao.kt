@@ -14,9 +14,4 @@ interface UsersDao {
 	@Insert(onConflict = REPLACE)
 	suspend fun setUserList(listCountriesStats: List<User>)
 	
-	@Query("SELECT * FROM User")
-	suspend fun getUser(): User
-	
-	@Insert(onConflict = REPLACE)
-	suspend fun setUser(worldStats: User?)
 }

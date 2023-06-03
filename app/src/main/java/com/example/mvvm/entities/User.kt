@@ -58,4 +58,5 @@ data class User(
     )
 }
 
-class UserList : ArrayList<User>()
+/*
+class UserList : ArrayList<User>()*/

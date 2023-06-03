@@ -18,7 +18,7 @@ class UsersRepositoryTest {
 	
 	@Before
 	fun setUp() {
-		MockitoAnnotations.initMocks(this)
+		MockitoAnnotations.openMocks(this)
 	}
 	
 	
@@ -44,8 +44,7 @@ class UsersRepositoryTest {
 				"receivedEventsUrl1",
 				"type1",
 				false
-			),
-			User(
+			), User(
 				"user2",
 				2L,
 				"url2",

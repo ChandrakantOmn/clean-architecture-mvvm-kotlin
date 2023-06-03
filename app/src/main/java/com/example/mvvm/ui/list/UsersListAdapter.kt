@@ -45,6 +45,9 @@ class UsersListAdapter(
 				.load(user.avatarUrl)
 				.placeholder(R.mipmap.ic_launcher)
 				.into(viewDataBinding.ivProfilePic)
+			viewDataBinding.userContainer.setOnClickListener {
+				itemClickListener.onItemClick(user)
+			}
 			//viewDataBinding.userContainer.setOnClickListener {  } = countriesItemClickListener
 		}
 	}

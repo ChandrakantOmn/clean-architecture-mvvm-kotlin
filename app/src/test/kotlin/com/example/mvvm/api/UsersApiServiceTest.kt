@@ -1,7 +1,6 @@
 package com.example.mvvm.api
 
 import com.example.mvvm.entities.User
-import com.example.mvvm.entities.UserList
 import junit.framework.TestCase.assertEquals
 import kotlinx.coroutines.runBlocking
 import org.junit.Before
@@ -23,7 +22,7 @@ class UsersApiServiceTest {
 	/**Should return a list of users with the specified 'since' and 'per_page' parameters*/
 	@Test
 	 fun getUsersWithSinceAndPerPageParameters() {
-		val userList = UserList()
+		val userList = mutableListOf<User>()
 		val user1 = User(
 			"user1",
 			1L,
@@ -74,7 +73,7 @@ class UsersApiServiceTest {
 	/**Should return an empty list when no users match the specified 'since' and 'per_page' parameters*/
 	@Test
 	 fun getUsersWithNoMatchingSinceAndPerPageParameters() {
-		val userList = UserList()
+		val userList = mutableListOf<User>()
 		val user1 = User(
 			"user1",
 			1L,

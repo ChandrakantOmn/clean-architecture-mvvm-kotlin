@@ -1,7 +1,7 @@
 package com.example.mvvm.api
 
 import com.example.mvvm.di.modules.USERS
-import com.example.mvvm.entities.UserList
+import com.example.mvvm.entities.User
 import retrofit2.http.GET
 import retrofit2.http.Query
 
@@ -10,5 +10,5 @@ import retrofit2.http.Query
  */
 interface UsersApiService {
     @GET(USERS)
-    suspend fun getUsers(@Query("since") since: Long, @Query("per_page") perPage: Int): UserList
+    suspend fun getUsers(@Query("since") since: Long, @Query("per_page") perPage: Int): List<User>
 }
